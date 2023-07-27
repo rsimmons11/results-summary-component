@@ -1,0 +1,198 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     max-width: 1440px;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+     min-height: 100vh;   
+     font-family: 'HankenGrotesk', sans-serif; 
+     font-size: 18px;
+     color: hsl(0, 0%, 100%)
+}
+
+.resultContainer {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     padding: 25px;
+     width: 50%;
+     border-radius: 25px;
+     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+     overflow: hidden;
+
+}
+
+.summaryContainer {
+     color: hsl(0, 0%, 13%);
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.summaryContainer h3 {
+     margin: 0 0 10px 15px;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+     display: flex;
+    max-width: 640px;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 8px 16px 48px hsla(224, 30%, 27%,  0.2)
+
+
+     
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.score {
+     border-radius: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     margin: 40px auto;
+     padding: 50px;
+     width: 12rem;
+     height: 12rem;
+     border-radius: 100%;
+     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.resultTitle, .scoreOutOf100, .resultDetails, button {
+     color:hsla(0, 0%, 100%, 0.7);
+}
+
+.myScore {
+     font-weight: bold;
+     font-size: 60px;
+}
+
+.myResult {
+     font-weight: bold;
+     font-size: 25px;
+}
+
+.myResult, .resultDetails {
+     margin-bottom: 10px;
+}
+
+.resultTitle, .summaryTitle {
+     font-size: 25px;
+}
+
+.summaryTitle {
+     margin-left: 10px;
+}
+
+.resultDetails {
+     padding: 0 10px;
+     margin-bottom: 20px;
+}
+
+li {
+     list-style-type: none;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px;
+     margin: 15px;
+     border-radius: 10px;
+}
+
+.reactionSummary {
+     background-color: hsla(0, 100%, 67%, 0.1);
+     color: hsl(0, 100%, 67%);
+}
+
+.memorySummary {
+     background-color: hsla(39, 100%, 56%, 0.1);
+     color: hsl(39, 100%, 56%);
+}
+
+.verbalSummary {
+     background-color: hsla(166, 100%, 37%, 0.1);
+     color: hsl(166, 100%, 37%);
+}
+
+.visualSummary {
+     background-color: hsla(234, 85%, 45%, 0.1);
+     color: hsl(234, 85%, 45%);
+}
+
+.boldNumber {
+     color: hsl(224, 30%, 27%);
+     font-weight: bold;
+     margin-left: 50px;
+}
+
+.lightNumber {
+    color: hsl(241, 100%, 89%)
+}
+
+img {
+     margin-right: 10px;
+}
+
+button {
+     width: 260px;     
+     margin: auto;
+     padding: 16px 32px;
+     line-height: 16px;
+     background-color: hsl(224, 30%, 27%);
+     border-radius: 125px;
+     border: 0;
+     cursor: pointer;
+}
+
+button:hover {
+     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+
+@media (max-width: 800px) {
+     .container {
+          flex-direction: column;
+          width: 100%;
+          min-height: 100px;
+     }
+     .resultContainer, .summaryContainer {
+          width: 100%;
+          height: 100%;
+     }
+     .resultContainer {
+          border-radius: 0;
+          border-bottom-right-radius: 30px;
+          border-bottom-left-radius: 30px;
+     }
+     
+}
